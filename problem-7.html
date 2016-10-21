@@ -1,0 +1,19 @@
+<html>
+<script>
+var primes = [2,3,5,7,11,13];
+function isPrime(num) {
+	for (var i = 0; primes[i] !== undefined && primes[i] <= num / 2; i++) {
+		if (num % primes[i] == 0)
+			return false
+	}
+	return true;
+}
+
+for (var num = 17; primes.length <= 100000; num +=2) {
+	if (isPrime(num)) {
+		primes.push(num);
+	}
+}
+
+</script>
+</html>

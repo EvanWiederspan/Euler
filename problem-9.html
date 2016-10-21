@@ -1,0 +1,15 @@
+<html>
+<script>
+function triples(n,m) {
+	return [(Math.pow(n,2) - Math.pow(m,2)), 2 * n * m, (Math.pow(n,2) + Math.pow(m,2))];
+}
+
+for (let i = 10; i <= 20; i++) {
+	for (let j = 1; j < i; j++) {
+	let trips = triples(i,j);
+		if (trips.reduce((prev, cur) => prev + cur, 0) == 1000)
+			console.log(trips.reduce((prev, cur) => prev * cur, 1));
+	}
+}
+</script>
+</html>
